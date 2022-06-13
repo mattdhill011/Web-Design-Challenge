@@ -89,7 +89,8 @@ section {
 
 section h1 {
     color:#15b494;
-    padding:40px;
+    padding:10px;
+    padding-left: 20px;
     padding-bottom:5px;
     font-weight:700px;
     font-size: 24pt;
@@ -127,10 +128,134 @@ section p img {
 .right-section img {
     height: 150px;
     width: 150px;
-    padding: 20px;
+    padding: 15px;
+    border: 5px solid white;
 }
 
 .right-section img:hover {
-    border: 5px solid #555:
+    border: 5px solid #ddd;
+}
+
+@media (max-width:2400px) {
+    .left-section {
+        margin-left: 525px;
+    }
+}
+
+@media (max-width:2300px) {
+    .left-section {
+        margin-left: 475px;
+    }
+}
+
+@media (max-width:2200px) {
+    .left-section {
+        margin-left: 425px;
+    }
+}
+
+@media (max-width:2100px) {
+    .left-section {
+        margin-left: 375px;
+    }
+}
+
+@media (max-width:2000px) {
+    .left-section {
+        margin-left: 325px;
+    }
+}
+
+@media (max-width:1900px) {
+    .left-section {
+        margin-left: 275px;
+    }
+}
+@media (max-width:1800px) {
+    .left-section {
+        margin-left: 225px;
+    }  
+}
+
+@media (max-width:1700px) {
+    .left-section {
+        margin-left: 175px;
+    }  
+}
+
+@media (max-width:1600px) {
+    .left-section {
+        margin-left: 125px;
+    }  
+}
+
+@media (max-width:1500px) {
+    .left-section {
+        margin-left: 350px;
+    }
+    
+    .right-section {
+        margin-left: 350px;
+    }
+}
+
+@media (max-width:1400px) {
+    .left-section {
+        margin-left: 300px;
+    }
+    
+    .right-section {
+        margin-left: 300px;
+    }
+}
+
+@media (max-width:1300x) {
+    .left-section {
+        margin-left: 250px;
+    }
+    
+    .right-section {
+        margin-left: 250px;
+    }
+}
+
+@media (max-width:1200px) {
+    .left-section {
+        margin-left: 200px;
+    }  
+
+    .right-section {
+        margin-left: 200px;
+    }
+}
+
+@media (max-width:1100px) {
+    .left-section {
+        margin-left: 150px;
+    }  
+
+    .right-section {
+        margin-left: 150px;
+    }
+}
+
+@media (max-width:1000px) {
+    .left-section {
+        margin-left: 100px;
+    }  
+
+    .right-section {
+        margin-left: 100px;
+    }
+}
+
+@media (max-width:900px) {
+    .left-section {
+        margin-left: 50px;
+    }  
+
+    .right-section {
+        margin-left: 50px;
+    }
 }
 

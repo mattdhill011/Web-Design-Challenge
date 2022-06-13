@@ -86,12 +86,13 @@ section {
     margin: 40px;
     border-radius: 5pt;
     max-width: fit-content;
+    padding: 20px;
 }
 
 section h1 {
     color:#15b494;
-    padding:40px;
-    padding-bottom:5px;
+    padding: 10px;
+    padding-left: 20px;
     font-weight:700px;
     font-size: 24pt;
 }
@@ -105,4 +106,11 @@ section p img {
     height: 40%;
     width: 40%;
     float: left;
+}
+
+@media (max-width:1800px) {
+    .column {
+        height: 30%;
+        width: 30%;
+    }
 }
