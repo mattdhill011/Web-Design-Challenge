@@ -80,3 +80,42 @@ body {
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
+section {
+    background-color: white;
+    margin: 40px;
+    border-radius: 5pt;
+    padding: 20px;
+    padding-top: 5px;
+    max-width: fit-content;
+}
+
+section h1 {
+    color:#15b494;
+    padding:10px;
+    font-weight:700px;
+    font-size: 24pt;
+}
+
+section p {
+    padding: 10px;
+}
+
+table {
+    border:1px solid $color-form-highlight;
+}
+
+tr {
+    padding: 5px;
+    text-align: left;
+}
+
+tr:nth-child(even) {background-color: #f2f2f2;}
+
+th, td {
+    padding: 8px;
+    font-size: 10pt;
+    border-bottom:1px groove;
+}
+
+
