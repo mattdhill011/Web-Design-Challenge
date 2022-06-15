@@ -1,0 +1,202 @@
+<style>
+.header {
+  background-color:  #15b494;
+  box-shadow: 1px 1px 4px 0 rgba(0,0,0,.1);
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+  border-radius: 3px;
+}
+
+.header ul li a {
+    color: black;
+}
+
+.logo {
+    color:#f2f2f2;
+}
+.header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.header li a {
+  display: block;
+  padding: 20px 20px;
+  border-right: 1px solid #ddd;
+  text-decoration: none;
+}
+
+.header li a:hover {
+  background-color: #ddd;
+}
+
+.header .logo {
+  display: block;
+  float: left;
+  font-size: 2em;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+.header .menu {
+  clear: both;
+  max-height: 0;
+  transition: max-height .2s ease-out;
+}
+
+.header .menu-icon {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  padding: 28px 20px;
+  position: relative;
+  user-select: none;
+}
+
+.header .menu-icon .navicon {
+  background: #333;
+  display: block;
+  height: 2px;
+  position: relative;
+  transition: background .2s ease-out;
+  width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+  background: #333;
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all .2s ease-out;
+  width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+  top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+  top: -5px;
+}
+
+.header .menu-btn {
+  display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+  max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+  background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+  transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+  transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+  top: 0;
+}
+
+.dropdown {
+    overflow: hidden;
+    float: none;
+}
+
+.dropdown .dropbtn {
+    font-size: 17px;
+    border:none;
+    outline: none;
+    color: black;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    background-color: #ddd;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 0;
+  }
+
+  .dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    float: none;
+  }
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    max-height: 240px;
+}
+
+@media (min-width: 48em) {
+  .header li {
+    float: left;
+  }
+  .header li a {
+    padding: 20px 30px;
+  }
+  .header .menu {
+    clear: none;
+    float: right;
+    max-height: none;
+  }
+  .header .menu-icon {
+    display: none;
+  }
+}
+
+
+
+</style>
+
+
+<header class="header mobilnav">
+  <a href="./index.html" class="logo mobilnav">Latitude</a>
+  <input class="menu-btn mobilnav" type="checkbox" id="menu-btn" />
+  <label class="menu-icon mobilnav" for="menu-btn"><span class="navicon"></span></label>
+  <ul class="menu mobilnav">
+    <div class="dropdown mobilnav">
+			<button class="dropbtn mobilnav">Plots ▼
+				<i class="fa fa-caret-down mobilnav"></i>
+			</button>
+			<div class="dropdown-content mobilnav">
+				<a href="./max-temperature.html">Max Temperature</a>
+				<a href="./humidity.html">Humidity</a>
+				<a href="./cloudiness.html">Cloudiness</a>
+				<a href="./wind-speed.html">Wind Speed</a>
+			</div>
+		</div>	
+    <li><a href="./data.html">Data</a></li>
+    <li><a href="./comparison.html">Comparison</a></li>
+  </ul>
+</header>

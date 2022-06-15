@@ -1,6 +1,5 @@
 body {
     background-color: #f2f2f2;
-    margin: 0;
 }
 
 .topnav {
@@ -49,7 +48,6 @@ body {
     background-color: inherit;
     font-family: inherit;
     margin: 0;
-    float: right;
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn {
@@ -58,13 +56,11 @@ body {
 
 .dropdown-content {
     display: none;
-    margin-top: 48px;
     position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-    
   }
 
   .dropdown-content a {
@@ -82,10 +78,6 @@ body {
 
 .dropdown:hover .dropdown-content {
     display: block;
-}
-
-.header-break {
-    display: none;
 }
 
 
@@ -144,11 +136,6 @@ section p img {
 
 .right-section img:hover {
     border: 5px solid #ddd;
-}
-
-
-.icon {
-  display: none;
 }
 
 @media (max-width:2400px) {
@@ -272,109 +259,4 @@ section p img {
     .right-section {
         margin-left: 50px;
     }
-}
-
-
-@media (max-width:640px) {
-    .topnav {
-        overflow: hidden;
-        background-color: white;
-      }
-
-      .active {
-        width: 100%;
-      }
-      /* Hide the links inside the navigation menu (except for logo/home) */
-      .topnav #myLinks {
-        width: 100%;
-        display: none;
-        position: relative;
-        background-color: #f2f2f2;
-        float: left;
-      }
-      
-      /* Style navigation menu links */
-      .topnav a {
-        color: black;
-        padding: 14px 16px;
-        text-decoration: none;
-        font-size: 17px;
-        display: block;
-        float: none;
-        text-align: left;
-        background-color: white;
-      }
-
-      .dropdown {
-        float: left;
-        background-color: white;
-        width: 100%;
-        
-      }
-
-      .dropdown .dropbtn {
-        width: 100%;
-        text-align: left;
-      }
-
-      .dropdown-content a {
-        display: block;
-        position: relative;
-        background-color: white;
-        margin-left: 20px;
-      }
-
-      .dropdown:hover .dropdown-content {
-        display: block;
-        float: none;
-      }
-
-    
-      
-      /* Style the hamburger menu */
-      .topnav a.icon {
-        display: block;
-        background:#15b494;
-        display: block;
-        position: absolute;
-        right: 0;
-        top: 0;
-      }
-      
-      /* Add a grey background color on mouse-over */
-      .topnav a:hover {
-        background-color: #ddd;
-        color: black;
-      }
-      
-      /* Style the active link (or home/logo) */
-      .active {
-        background-color: #15b494;
-        color: white;
-      }
-
-      body {
-        background-color: white;
-      }
-
-      section {
-        margin: 0;
-        padding: 0;
-      }
-
-      section h1 {
-        padding-left: 0;
-      }
-
-      section p {
-        padding: 0;
-      }
-
-      .left-section {
-        width: auto;
-      }
-
-      .right-section {
-        width: auto;
-      }
 }
