@@ -4,97 +4,76 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 		<title>Web Design Challenge</title>
-		<link rel="stylesheet" href="./assets/styles.css">
 
 		<!-- I took the icons for the drop down menu for small screens (and a good bit of the code) from the tutorials from w3schools.com, 
 			they require this stylesheet to get the icons to work -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
+		<link rel="stylesheet" href="./assets/styles.css">
 	</head>
 	
 <body>
-	<div class="topnav">
-		<a class="active" href="./index.html">Latitude</a>
-
-		<div id="myLinks" class="Links">
-			<a href="./data.html">Data</a>
-			<a href="./comparison.html">Comparison</a>
-			<div class="dropdown">
-
-				<!-- For the drop down menus in the small screen version I used a javascript button to toggle menus-->
-				<button href="javascript:void(0);" onclick="submenuDisplay()" class="dropbtn">Plots
-					<i class="fa fa-caret-down"></i>
-				</button>
-				<div class="dropdown-content" id="plotContent">
-					<a href="./max-temperature.html">Max Temperature</a>
-					<a href="./humidity.html">Humidity</a>
-					<a href="./cloudiness.html">Cloudiness</a>
-					<a href="./wind-speed.html">Wind Speed</a>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<a class="navbar-brand" href="./index.html">Latitude</a>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+		  <span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNavDropdown">
+			
+		  <ul class="navbar-nav">
+			<li class="nav-item active">
+				<a class="nav-link" href="#"> <span class="sr-only">(current)</span></a>
+			  </li>
+			<li class="nav-item dropdown">
+				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				  Plots
+				</a>
+				<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+				  <a class="dropdown-item" href="./max-temperature.html">Max Temperature</a>
+				  <a class="dropdown-item" href="./humidity.html">Humidity</a>
+				  <a class="dropdown-item" href="./cloudiness.html">Cloudiness</a>
+				  <a class="dropdown-item" href="./wind-speed.html">Wind Speed</a>
 				</div>
-			</div>	
+			  </li>			
+			<li class="nav-item">
+			  <a class="nav-link" href="./comparison.html">Comparison</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="./data.html">Data</a>
+			</li>
+			
+		  </ul>
 		</div>
-		<a href="javascript:void(0);" class="icon" onclick="myFunction()">
-			<i class="fa fa-bars"></i>
-		</a>
-				
-	</div>
+	  </nav>
 
 	<hr class="header-break" id="header-break">
 
-	<section class="left-section">
-		<h1>Summary: Latitude vs. X</h1>
-		<hr>
-		<p><img src="./visualizations/Fig1.png" alt="City Latitude vs. Max Temperature">The purpose of this project was to analyze how weather changes as you get closer to the equator. To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a dataset on over 500 cities.</p>
-		<p>After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs. latitude. Factors we looked at included: temperature, cloudiness, wind speed, and humidity. This site provides the source data and visualizations created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed.</p>
-	</section>
-
-	<section class="right-section">
-		<h1>Visualizations</h1>
-		<hr>
-		<div class="column">
-			<a href="./max-temperature.html"><img src="./visualizations/Fig1.png" alt="City Latitude vs. Max Temperature"></a>
-			<a href="./humidity.html"><img src="./visualizations/Fig2.png" alt="City Latitude vs. Humidity"></a>
+	<div class="container">
+		<div class="row justify-content-around main-text">
+			<div class="col-6 summary">
+				<h1>Summary: Latitude vs. X</h1>
+					<hr>
+				<p><img src="./visualizations/Fig1.png" alt="City Latitude vs. Max Temperature">The purpose of this project was to analyze how weather changes as you get closer to the equator. To accomplish this analysis, we first pulled data from the OpenWeatherMap API to assemble a dataset on over 500 cities.</p>
+				<p>After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs. latitude. Factors we looked at included: temperature, cloudiness, wind speed, and humidity. This site provides the source data and visualizations created as part of the analysis, as well as explanations and descriptions of any trends and correlations witnessed.</p>
+			</div>
+		
+			<div class="col-4 visualization">
+				<h1>Visualizations</h1>
+					<hr>
+				<div class="gallery">
+					<a href="./max-temperature.html"><img src="./visualizations/Fig1.png" alt="City Latitude vs. Max Temperature"></a>
+					<a href="./humidity.html"><img src="./visualizations/Fig2.png" alt="City Latitude vs. Humidity"></a>
+				
+					<a href="./cloudiness.html"><img src="./visualizations/Fig3.png" alt="City Latitude vs. Cloudiness"></a>
+					<a href="./wind-speed.html"><img src="./visualizations/Fig4.png" alt="City Latitude vs. Wind Speed"></a>
+				</div>
+			</div>
 		</div>
-		<div class="column">	
-			<a href="./cloudiness.html"><img src="./visualizations/Fig3.png" alt="City Latitude vs. Cloudiness"></a>
-			<a href="./wind-speed.html"><img src="./visualizations/Fig4.png" alt="City Latitude vs. Wind Speed"></a>
-		</div>
-	</section>
+	</div>
 </body>
 
-
-<!-- Javascript to toggle the menus for the small screen-->
-<script>
-	// When the icon is clicked it toggles the display the dropdown menu and the header-break bar
-	// The icon is hidden and only displays on screen sizes smaller than 640px
-	function myFunction() {
-  		var x = document.getElementById("myLinks");
-  		var y = document.getElementById("header-break")
-
-  		if (x.style.display === "block") {
-    		x.style.display = "none";
-			y.style.display = "none";
-  		} else {
-    		x.style.display = "block";
-			y.style.display = "block";
-  	}
-}
-	// This toggles a nested drop-down menu under the 'Plots' menu item.
-	// This also checks if the window width is less than or equal to 640px
-	// to stop it from displaying outside of the small screen set up
-	function submenuDisplay() {
-		var x = document.getElementById("plotContent");
-		var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
-
-		if (width <= 640) {
-			if (x.style.display === "block") {
-    			x.style.display = "none";
-				
-  			} else {
-    			x.style.display = "block";
-				x.style.position = "relative";
-		}
-  	}
-}
-
 </script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
